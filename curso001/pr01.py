@@ -9,21 +9,18 @@
 reservoir_volume = 4.445e8
 # The amount of rainfall from a storm (in cubic metres)
 rainfall = 5e6
-
 # decrease the rainfall variable by 10% to account for runoff
 descuento = 5e6*0.1;
 rainfall = 5e6 - descuento;
 # add the rainfall variable to the reservoir_volume variable
-rainfall = rainfall + reservoir_volume;
+reservoir_volume = rainfall + reservoir_volume;
 # increase reservoir_volume by 5% to account for stormwater that flows
 incremento = reservoir_volume*.05;
 reservoir_volume = incremento + reservoir_volume;
 # into the reservoir in the days following the storm
 print(reservoir_volume);
 # decrease reservoir_volume by 5% to account for evaporation
-
 reservoir_volume = reservoir_volume - (reservoir_volume*.05) ;
-
 # subtract 2.5e5 cubic metres from reservoir_volume to account for water
 # that's piped to arid regions.
 reservoir_volume = reservoir_volume - 2.5e5;
