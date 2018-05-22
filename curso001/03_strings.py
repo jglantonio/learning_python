@@ -17,3 +17,12 @@ print("La variable "+variable+", tiene ",length_variable);
 
 print(variable[0]);
 
+# Poner todas las letras en capital.
+
+variable3 = variable+variable2;
+print(variable3.title());
+
+# islower(); son todo minusculas
+
+print(variable3.islower());
+print((variable3.lower()).islower());
